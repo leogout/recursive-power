@@ -1,0 +1,9 @@
+<ul>
+  <li>
+    {{ node.name }}
+    @if (node.children?.length) { @for(child of node.children; track node.name)
+    {
+    <app-tree-node [node]="child"></app-tree-node>
+    } }
+  </li>
+</ul>
